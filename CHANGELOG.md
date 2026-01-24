@@ -1,3 +1,9 @@
+## 0.1.0 (2026-01-24)
+
+### Feat
+
+- add an argocd application definition
+
 ## 0.0.3 (2026-01-12)
 
 ### Feat
