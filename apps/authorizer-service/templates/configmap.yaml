@@ -1,7 +1,7 @@
 apiVersion: v1
 kind: ConfigMap
 metadata:
-  name: elog-config
+  name: authorizer-config
   namespace: {{ .Release.Namespace }}
 data:
   config.yaml: |-
