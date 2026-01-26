@@ -1,3 +1,14 @@
+## 0.2.0 (2026-01-27)
+
+### Feat
+
+- add secret app
+
+### Fix
+
+- fix configmap name
+- replace text to autorizer-service label in notes
+
 ## 0.1.0 (2026-01-24)
 
 ### Feat
