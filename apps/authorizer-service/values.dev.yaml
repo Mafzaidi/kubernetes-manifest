@@ -107,8 +107,7 @@ volumes:
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
   - name: config
-    mountPath: /app/config/config.yaml
-    subPath: config.yaml
+    mountPath: /app/config
     readOnly: true
 nodeSelector: {}
 tolerations: []
