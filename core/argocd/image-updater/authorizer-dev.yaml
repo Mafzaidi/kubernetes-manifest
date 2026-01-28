@@ -1,0 +1,28 @@
+apiVersion: argocd-image-updater.argoproj.io/v1alpha1
+kind: ImageUpdater
+metadata:
+  name: authorizer-dev
+  namespace: argocd
+spec:
+  # namespace tempat ArgoCD Application berada
+  namespace: argocd
+
+  # daftar aplikasi yang dikelola
+  applicationRefs:
+    - selector:
+        matchNames:
+          - authorizer-service-dev   # nama ArgoCD Application
+      updateStrategy:
+        type: latest                 # bisa latest atau semver
+      images:
+        - name: mafzaidi93/authorizer-service
+          updateStrategy:
+            type: latest
+
+  # global default settings
+  commonUpdateSettings:
+    updateStrategy:
+      type: latest
+    writeBack:
+      method: git                    # commit langsung ke git
+      pushRemote: origin             # remote name
