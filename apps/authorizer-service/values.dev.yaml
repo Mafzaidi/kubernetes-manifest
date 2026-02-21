@@ -103,15 +103,27 @@ volumes:
   - name: config
     configMap:
       name: authorizer-config
+  - name: jwt-key
+    secret:
+      secretName: authorizer-jwt-key
 # Additional volumeMounts on the output Deployment definition.
 volumeMounts:
   - name: config
     mountPath: /app/config
     readOnly: true
+  - name: jwt-key
+    mountPath: /keys
+    readOnly: true
 nodeSelector: {}
 tolerations: []
 affinity: {}
+
 envFrom:
   - secretRef:
       name: authorizer-service-secret
+
+env:
+  - name: JWT_PRIVATE_KEY_PATH
+    value: /keys/private.pem
+
 containerPort: 4000
