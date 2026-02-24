@@ -1,7 +1,7 @@
 apiVersion: argocd-image-updater.argoproj.io/v1alpha1
 kind: ImageUpdater
 metadata:
-  name: authorizer-dev
+  name: authorizer-production
   namespace: argocd
 spec:
   # namespace tempat ArgoCD Application berada
@@ -11,7 +11,7 @@ spec:
   applicationRefs:
     - selector:
         matchNames:
-          - authorizer-dev   # nama ArgoCD Application
+          - authorizer-production   # nama ArgoCD Application
       updateStrategy:
         type: latest                 # bisa latest atau semver
       images:

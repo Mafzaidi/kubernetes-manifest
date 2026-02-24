@@ -55,7 +55,7 @@ ingress:
   className: "nginx"
   annotations: {}
   hosts:
-    - host: authorizer.localdev.me
+    - host: authorizer.localprod.me
       paths:
         - path: /
           pathType: Prefix

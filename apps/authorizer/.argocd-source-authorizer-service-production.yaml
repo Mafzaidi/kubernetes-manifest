@@ -4,5 +4,5 @@ helm:
     value: docker.io/mafzaidi93/authorizer
     forcestring: true
   - name: image.tag
-    value: 0.16.0-dev.0823d81
+    value: 1.0.0
     forcestring: true
