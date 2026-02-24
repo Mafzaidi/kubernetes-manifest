@@ -11,11 +11,11 @@ spec:
   applicationRefs:
     - selector:
         matchNames:
-          - authorizer-service-dev   # nama ArgoCD Application
+          - authorizer-dev   # nama ArgoCD Application
       updateStrategy:
         type: latest                 # bisa latest atau semver
       images:
-        - name: mafzaidi93/authorizer-service
+        - name: mafzaidi93/authorizer
           updateStrategy:
             type: latest
 

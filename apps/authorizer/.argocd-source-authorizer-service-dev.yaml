@@ -1,7 +1,7 @@
 helm:
   parameters:
   - name: image.repository
-    value: docker.io/mafzaidi93/authorizer-service
+    value: docker.io/mafzaidi93/authorizer
     forcestring: true
   - name: image.tag
     value: 0.16.0-dev.0823d81

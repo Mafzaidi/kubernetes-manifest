@@ -1,10 +1,10 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: authorizer-service-dev
+  name: authorizer-dev
   namespace: argocd
   annotations:
-    argocd-image-updater.argoproj.io/image-list: app=docker.io/mafzaidi93/authorizer-service
+    argocd-image-updater.argoproj.io/image-list: app=docker.io/mafzaidi93/authorizer
 
     argocd-image-updater.argoproj.io/app.update-strategy: latest
     argocd-image-updater.argoproj.io/app.allow-tags: regexp:^.*-dev.*
@@ -19,13 +19,13 @@ spec:
   source:
     repoURL: https://github.com/Mafzaidi/kubernetes-manifest.git
     targetRevision: dev
-    path: apps/authorizer-service
+    path: apps/authorizer
     helm:
       valueFiles:
         - values.dev.yaml
   destination:
     server: https://kubernetes.default.svc
-    namespace: authorizer-service-dev
+    namespace: authorizer-dev
   syncPolicy:
     automated:
       prune: true

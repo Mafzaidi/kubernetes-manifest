@@ -6,7 +6,7 @@
 replicaCount: 1
 # This sets the container image more information can be found here: https://kubernetes.io/docs/concepts/containers/images/
 image:
-  repository: docker.io/mafzaidi93/authorizer-service
+  repository: docker.io/mafzaidi93/authorizer
   # This sets the pull policy for images.
   pullPolicy: IfNotPresent
   # Overrides the image tag whose default is the chart appVersion.
@@ -120,7 +120,7 @@ affinity: {}
 
 envFrom:
   - secretRef:
-      name: authorizer-service-secret
+      name: authorizer-secret
 
 env:
   - name: JWT_PRIVATE_KEY_PATH
