@@ -55,7 +55,7 @@ ingress:
   className: "nginx"
   annotations: {}
   hosts:
-    - host: authorizer.localprod.me
+    - host: zencode.localprod.me
       paths:
         - path: /
           pathType: Prefix
