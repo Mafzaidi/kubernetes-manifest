@@ -1,8 +1,0 @@
-helm:
-  parameters:
-  - name: image.repository
-    value: docker.io/mafzaidi93/authorizer
-    forcestring: true
-  - name: image.tag
-    value: 1.0.0
-    forcestring: true
